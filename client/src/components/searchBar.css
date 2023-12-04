@@ -1,0 +1,41 @@
+.search-main-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 50px;
+    /* left: 5%; */
+}
+
+ .input-container {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 1.5rem;
+    border-style: solid;
+    height: 28px;
+    width: 25rem;
+    padding-left: 40px; 
+    text-indent: 5px; 
+    font-size: 16px;
+    font-weight: normal;
+    color: #b5b5b5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+} 
+
+#svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #6B7280;
+    fill: currentColor;
+}
+
+
+#searchSubmit{
+    display: block;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    bottom: 30%;
+    left:10px;
+transform: translateY(-50%);
+    
+}
