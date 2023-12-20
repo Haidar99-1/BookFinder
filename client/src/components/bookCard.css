@@ -1,0 +1,42 @@
+/* .container{
+    display: flex;
+  
+} */
+
+.row-container{
+    
+    /* display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    gap: 25px;
+    margin-top: 5%; */
+} 
+
+.card-item{
+   
+
+}
+.btn.btn-primary{
+    display: flex;
+    justify-content: center;
+    background-color: #ff9900; 
+    cursor: pointer;
+    border-radius: 25px;
+    color: black;
+    border-color: white;
+
+}
+
+.btn.btn-primary:hover{
+    background-color: #D98200;
+    color: black;
+    opacity: 0.8;
+}
+
+.as.card-footer {
+    background-color: white;
+    opacity: 1;
+}
+
+
+

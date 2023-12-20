@@ -2,19 +2,22 @@
 import React, {useState} from "react"
 import './searchBar.css'
 
+
 const SearchBar: React.FC = () => {
     const [bookTitle, setBookTitle] = useState<string>("");
+    const url:string = `http://localhost:3001/books/${bookTitle}`
+   
 
-    const handleBookTitle = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        // event.preventDefault();
-        setBookTitle(event.target.value);
-        console.log("bookTitle -->>", bookTitle);
+    
+    async function handleSubmit(event: React.FormEvent<HTMLElement>) {
+        event.preventDefault();
+        const response = await fetch(url, {
+            method: "GET",
+        });
+    
+        console.log("response -> ", response);
     }
-
-    const handleSubmit = (event: React.FormEvent<HTMLElement>):void => {
-        // api call localhost:3001/bookTitle 
-        // then in index.ts file we will call NYT api with the give bookTitle by url querying    
-    }
+    console.log(bookTitle)
 
     return (
         <main className="search-main-container">
@@ -23,7 +26,8 @@ const SearchBar: React.FC = () => {
                 className="input-container" 
                 type="text" 
                 placeholder="Search for author"
-                onChange={handleBookTitle}
+                value={bookTitle}
+                onChange={(e) => setBookTitle(e.target.value)}
                 />
 
                 <button
